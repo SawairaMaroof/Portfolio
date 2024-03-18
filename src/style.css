@@ -24,6 +24,32 @@ img {
   width: 100%;
   object-fit: cover;
 }
+
+.side_img{
+  display: flex;
+  flex-wrap: wrap; /* Wrap images if they don't fit on a single line */
+  justify-content: space-between; /* Distribute images evenly with spacing */
+}
+
+.image {
+  border-radius: 8%;
+  border: 2px solid green; /* Green border */
+  width: 48%;
+  margin: 8px;
+  object-fit: cover;
+}
+
+/* For screens smaller than 768px */
+@media (max-width: 768px) {
+  .side_img {
+    padding: 15px;
+    justify-content: center; /* Center images vertically on smaller screens */
+  }
+  .image {
+    width: 100%; /* Images stack vertically */
+  }
+}
+
 p {
   color: black;
   font-size: 1.5rem;
@@ -56,7 +82,7 @@ p {
   display: inline-block;
   padding: 10px 30px;
   color: white;
-  background-color: transparent;
+  background-color: rgb(45, 85, 255);
   border: 2px solid rgb(45, 85, 255);
   font-size: 2rem;
   text-transform: uppercase;
@@ -65,10 +91,7 @@ p {
   transition: 0.3s ease;
   transition-property: background-color, color;
 }
-.cta:hover {
-  color: white;
-  background-color: rgb(45, 85, 255);
-}
+
 /* header section start */
 #header {
   position: fixed;
