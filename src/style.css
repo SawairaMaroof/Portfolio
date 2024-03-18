@@ -22,18 +22,19 @@ a {
 img {
   height: 100%;
   width: 100%;
-  object-fit: cover;
+  /* object-fit: cover; */
 }
 
 .side_img{
+  height: 300px;
   display: flex;
   flex-wrap: wrap; /* Wrap images if they don't fit on a single line */
   justify-content: space-between; /* Distribute images evenly with spacing */
 }
 
-.image {
-  border-radius: 8%;
-  border: 2px solid green; /* Green border */
+.side1 {
+  border-radius: 4%;
+  border: 2px solid #43505d; /* Green border */
   width: 48%;
   margin: 8px;
   object-fit: cover;
@@ -42,11 +43,12 @@ img {
 /* For screens smaller than 768px */
 @media (max-width: 768px) {
   .side_img {
+    height: auto;
     padding: 15px;
     justify-content: center; /* Center images vertically on smaller screens */
   }
-  .image {
-    width: 100%; /* Images stack vertically */
+  .side1 {
+    width: 100%;
   }
 }
 
